@@ -10,47 +10,46 @@ var React = require('react'),
     AppStore = require('../stores/AppStore');
 
 var App = React.createClass({
- 
-  getInitialState: function(){   
-    return {menu:AppStore.getMenu()};
-  },
-  
-  componentDidMount: function() {
-      AppStore.addChangeListener(this._onChange);
-  },
 
-  componentWillUnmount: function() {
-      AppStore.removeChangeListener(this._onChange);
-  },
-  
-  _onChange: function(){
-    console.log('on change layout');
-    this.setState({menu:AppStore.getMenu()})
-  },
+    getInitialState: function () {
+        return {
+            menu: AppStore.getMenu()
+        };
+    },
 
-  render: function() {
-    return (
-        <div>
-            <Logo />
-            <Sidebar menuItems={this.state.menu} />
-            <div className="wrap">
-                <Header />
-                 <RouteHandler/>
+    componentDidMount: function () {
+        AppStore.addChangeListener(this._onChange);
+    },
+
+    componentWillUnmount: function () {
+        AppStore.removeChangeListener(this._onChange);
+    },
+
+    _onChange: function () {
+        console.log('on change layout');
+        this.setState({
+            menu: AppStore.getMenu()
+        })
+    },
+
+    render: function () {
+        return (
+            <div>
+                <Logo/>
+                <Sidebar menuItems={this.state.menu}/>
+                <div className="wrap">
+                    <Header/>
+                    <RouteHandler/>
+                </div>
             </div>
-        </div>
-    );
-  },
-
-  
-  _populateMenu: function(){
-       
-    return {
-        menu: [
-            
-            
-        ]
+        );
     }
-  }
+  ,
+
+    _populateMenu: function () {
+
+        return {menu: []}
+    }
 
 });
 

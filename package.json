@@ -8,7 +8,6 @@
     "ejs": "~0.8.4",
     "events": "~1.0.2",
     "flux": "~2.0.1",
-    "grunt": "0.4.2",
     "grunt-browserify": "~3.2.1",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.1",
@@ -20,14 +19,16 @@
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-es6-module-transpiler": "~0.6.0",
-    "grunt-react": "~0.10.0",
+    "grunt-jst": "0.0.3",
+    "grunt-react": "^0.10.0",
     "grunt-sails-linker": "~0.9.5",
     "grunt-sync": "~0.0.4",
-    "include-all": "~0.1.3",
+    "include-all": "^0.1.6",
     "install": "^0.8.1",
     "jquery": "^3.2.1",
     "keymaster": "~1.6.2",
     "keymirror": "~0.1.1",
+    "material-ui": "^0.20.0",
     "npm": "^3.10.3",
     "object-assign": "^2.0.0",
     "rc": "~0.3.3",
@@ -38,7 +39,7 @@
     "reactify": "~0.17.1",
     "request": "~2.51.0",
     "requirejs": "~2.1.15",
-    "sails": "~0.12.0",
+    "sails": "^0.12.14",
     "sails-db-migrate": "^1.5.0",
     "sails-disk": "~0.10.9"
   },
@@ -54,7 +55,9 @@
   "author": "Christopher Rydahl",
   "license": "MIT",
   "devDependencies": {
+    "grunt": "^0.4.5",
     "grunt-notify": "0.4.5",
-    "grunt-rename": "^0.1.4"
+    "grunt-rename": "^0.1.4",
+    "load-grunt-tasks": "^3.5.2"
   }
 }
